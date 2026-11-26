@@ -1,0 +1,285 @@
+/* Estilo geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: white;
+    padding: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 20px;
+    background: #ffffff;
+    color: #111111;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background: #dddddd;
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Barra do topo */
+.navbar {
+    min-height: 70px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #181818;
+    border-bottom: 1px solid #333333;
+    margin-bottom: 35px;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-menu {
+    background: transparent;
+    color: white;
+    padding: 10px;
+}
+
+.placar {
+    color: #70e39a;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Conteúdo e telas */
+.quiz {
+    max-width: 750px;
+    margin: auto;
+}
+
+.tela h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 30px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #aaaaaa;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.escondido {
+    display: none !important;
+}
+
+.cartao,
+.bloco,
+.pergunta {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.cartao {
+    max-width: 480px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.cartao h2,
+.bloco h2 {
+    margin-bottom: 18px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0 15px;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    background: #282828;
+    color: white;
+    font-size: 16px;
+}
+
+/* Categorias e fases */
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    min-height: 120px;
+    background: #282828;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #3b3b3b;
+}
+
+.card:hover {
+    background: #353535;
+}
+
+
+.card small {
+    color: #aaaaaa;
+    font-weight: normal;
+}
+
+.bloqueada {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Perguntas */
+.topo-quiz {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #bbbbbb;
+}
+
+.pergunta h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+#opcoes {
+    display: grid;
+    gap: 10px;
+}
+
+.opcao {
+    width: 100%;
+    text-align: left;
+    background: #282828;
+    color: white;
+}
+
+.opcao:hover {
+    background: #383838;
+}
+
+.opcao.certa {
+    background: #159447;
+    color: white;
+}
+
+.opcao.errada {
+    background: #b3261e;
+    color: white;
+}
+
+.feedback {
+    margin-top: 18px;
+    line-height: 1.5;
+    color: #dddddd;
+}
+
+.itens-quiz {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.item {
+    background: #282828;
+    color: white;
+}
+
+/* Loja e ranking */
+.produto,
+.linha-ranking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #1b1b1b;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.produto p {
+    color: #aaaaaa;
+    margin-top: 7px;
+    line-height: 1.4;
+}
+
+.linha-ranking strong {
+    color: #70e39a;
+    white-space: nowrap;
+}
+
+.secundario {
+    background: #333333;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tela h1 {
+        font-size: 25px;
+    }
+
+    .produto,
+    .linha-ranking {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .produto button {
+        width: 100%;
+    }
+
+    .topo-quiz {
+        font-size: 14px;
+    }
+}

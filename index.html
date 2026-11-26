@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutQuiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="titulo">FUTQUIZ</h2>
+        <div class="menu escondido" id="menu">
+            <button class="btn-menu" id="btn-categorias">Quizzes</button>
+            <button class="btn-menu" id="btn-loja">Loja</button>
+            <button class="btn-menu" id="btn-ranking">Ranking</button>
+            <span class="placar" id="placar-pontos">0 pts</span>
+        </div>
+    </nav>
+
+    <main class="quiz">
+        <section id="tela-inicio" class="tela">
+            <h1>QUIZ DE FUTEBOL</h1>
+            <p class="subtitulo">Teste seus conhecimentos sobre futebol!</p>
+            <div class="cartao">
+                <h2>Qual é o seu nome?</h2>
+                <input type="text" id="campo-nome" maxlength="15" placeholder="Digite seu nome">
+                <button id="btn-comecar">Começar</button>
+            </div>
+        </section>
+
+        <section id="tela-categorias" class="tela escondido">
+            <h1>Escolha um quiz</h1>
+            <p class="subtitulo" id="ola-jogador"></p>
+            <div class="bloco">
+                <h2>Destaques</h2>
+                <div class="grade" id="lista-categorias"></div>
+            </div>
+        </section>
+
+        <section id="tela-fases" class="tela escondido">
+            <h1 id="titulo-categoria"></h1>
+            <p class="subtitulo">Acerte o mínimo de perguntas para liberar a próxima fase.</p>
+            <div class="grade" id="lista-fases"></div>
+            <button class="secundario" id="btn-voltar-categorias">Voltar</button>
+        </section>
+
+        <section id="tela-quiz" class="tela escondido">
+            <div class="topo-quiz">
+                <span id="progresso"></span>
+                <span id="pontos-fase"></span>
+            </div>
+            <div class="pergunta">
+                <h2 id="texto-pergunta"></h2>
+                <div id="opcoes"></div>
+                <p class="feedback escondido" id="feedback"></p>
+            </div>
+            <div class="itens-quiz">
+                <button class="item" id="btn-dica">Dica (<span id="qtd-dica">0</span>)</button>
+                <button class="item" id="btn-pular">Pular (<span id="qtd-pular">0</span>)</button>
+                <button class="item" id="btn-dobro">Dobro (<span id="qtd-dobro">0</span>)</button>
+            </div>
+            <button class="escondido" id="btn-proxima">Próxima</button>
+        </section>
+
+        <section id="tela-resultado" class="tela escondido">
+            <h1 id="titulo-resultado"></h1>
+            <div class="cartao">
+                <p id="texto-resultado"></p>
+                <button class="escondido" id="btn-proxima-fase">Próxima fase</button>
+                <button id="btn-repetir">Jogar novamente</button>
+                <button class="secundario" id="btn-resultado-voltar">Voltar aos quizzes</button>
+            </div>
+        </section>
+
+        <section id="tela-loja" class="tela escondido">
+            <h1>Loja</h1>
+            <p class="subtitulo">Troque seus pontos por itens.</p>
+            <div id="lista-loja"></div>
+        </section>
+
+        <section id="tela-ranking" class="tela escondido">
+            <h1>Ranking</h1>
+            <p class="subtitulo">Pontos totais conquistados.</p>
+            <div id="lista-ranking"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
